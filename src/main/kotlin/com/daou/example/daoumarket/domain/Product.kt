@@ -1,10 +1,9 @@
 package com.daou.example.daoumarket.domain
 
 import com.fasterxml.jackson.annotation.JsonBackReference
-import jakarta.persistence.*
-import org.springframework.data.annotation.CreatedDate
-import org.springframework.data.annotation.LastModifiedDate
-import java.time.LocalDateTime
+import jakarta.persistence.Entity
+import jakarta.persistence.Lob
+import jakarta.persistence.OneToMany
 
 @Entity
 class Product(
