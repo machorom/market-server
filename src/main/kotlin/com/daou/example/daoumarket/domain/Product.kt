@@ -7,10 +7,7 @@ import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime
 
 @Entity
-data class Product(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null,
+class Product(
     var code: String,
     var brand: String,
     var name: String,
@@ -28,9 +25,4 @@ data class Product(
     @JsonBackReference
     @OneToMany(mappedBy = "product")
     var additionalProducts: List<AdditionalProduct>,
-
-    @CreatedDate
-    var createdAt: LocalDateTime,
-    @LastModifiedDate
-    var updatedAt: LocalDateTime,
-)
+) : BaseEntity()

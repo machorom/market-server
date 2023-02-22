@@ -6,11 +6,7 @@ import org.springframework.data.annotation.LastModifiedDate
 import java.time.LocalDateTime
 
 @Entity
-data class ProductOption(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null,
-
+class ProductOption(
     var name: String,
     var inventory: Int,
     var price: Long,
@@ -18,9 +14,4 @@ data class ProductOption(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     var product: Product,
-
-    @CreatedDate
-    var createdAt: LocalDateTime,
-    @LastModifiedDate
-    var updatedAt: LocalDateTime,
-)
+): BaseEntity()
