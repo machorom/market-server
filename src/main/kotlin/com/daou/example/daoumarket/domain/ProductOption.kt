@@ -1,9 +1,9 @@
 package com.daou.example.daoumarket.domain
 
-import jakarta.persistence.*
-import org.springframework.data.annotation.CreatedDate
-import org.springframework.data.annotation.LastModifiedDate
-import java.time.LocalDateTime
+import jakarta.persistence.Entity
+import jakarta.persistence.FetchType
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.ManyToOne
 
 @Entity
 class ProductOption(
@@ -14,4 +14,4 @@ class ProductOption(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     var product: Product,
-): BaseEntity()
+) : BaseEntity()
