@@ -1,6 +1,6 @@
 package com.daou.example.daoumarket.product.service
 
-import com.daou.example.daoumarket.product.domain.model.ProductDetail
+import com.daou.example.daoumarket.product.domain.model.ProductDetailResponse
 import com.daou.example.daoumarket.product.domain.model.ProductResponse
 import com.daou.example.daoumarket.product.repository.ProductRepository
 import org.springframework.data.domain.Page
@@ -16,8 +16,8 @@ class ProductService(val productRepository: ProductRepository) {
         return result
     }
 
-    fun getProductDetail(id:Long): ProductDetail {
-        return ProductDetail.of(productRepository.findProductById(id))
+    fun getProductDetail(id:Long): ProductDetailResponse {
+        return ProductDetailResponse.of(productRepository.findProductById(id))
     }
 
 }

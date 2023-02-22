@@ -6,7 +6,7 @@ import com.daou.example.daoumarket.product.domain.AdditionalProduct
 import com.daou.example.daoumarket.product.domain.Product
 import com.daou.example.daoumarket.product.domain.ProductOption
 
-class ProductDetail(
+class ProductDetailResponse(
     var code: String,
     var brand: String,
     var name: String,
@@ -19,9 +19,9 @@ class ProductDetail(
     var additionalProducts: List<AdditionalProduct>,
 ) {
     companion object {
-        fun of(product: Product?): ProductDetail {
+        fun of(product: Product?): ProductDetailResponse {
             return product?.let { _product ->
-                ProductDetail(
+                ProductDetailResponse(
                     _product.code,
                     _product.brand,
                     _product.name,
