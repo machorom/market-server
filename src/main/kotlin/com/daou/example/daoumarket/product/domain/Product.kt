@@ -1,5 +1,6 @@
-package com.daou.example.daoumarket.domain
+package com.daou.example.daoumarket.product.domain
 
+import com.daou.example.daoumarket.core.domain.BaseEntity
 import com.fasterxml.jackson.annotation.JsonBackReference
 import jakarta.persistence.Entity
 import jakarta.persistence.Lob

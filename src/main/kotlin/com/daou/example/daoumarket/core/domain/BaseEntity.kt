@@ -1,4 +1,4 @@
-package com.daou.example.daoumarket.domain
+package com.daou.example.daoumarket.core.domain
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
