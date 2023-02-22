@@ -1,5 +1,6 @@
-package com.daou.example.daoumarket.domain
+package com.daou.example.daoumarket.product.domain
 
+import com.daou.example.daoumarket.core.domain.BaseEntity
 import jakarta.persistence.Entity
 import jakarta.persistence.FetchType
 import jakarta.persistence.JoinColumn
